@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>个人中心</title>
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=Edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <meta name="keywords" content="">-->
+<!--    <meta name="description" content="">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/ico.ico">
+    <!-- stylesheet css -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="../static/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="../static/css/user.css">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="icon" href="../static/ico.ico">
+    <link rel="stylesheet" href="../static/css/Normal flow.css">
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar-collapse">
+    <header class="header">
+        <div class="contai">
+            <div class="img clearfix">
+                <div class="right">
+                <img src="../static/img/logo.png" alt="猫眼电影">
+                <ul>
+                    <a href="/"><li>首页</li></a>
+                    <a href="movie.html"><li class="color">电影</li></a>
+                    <a href="./cinema.html"><li>影院</li></a>
+                    <a href=""><li>演出</li></a>
+                    <a href="./list.html"><li>榜单</li></a>
+                    <a href="./hotspot.html"><li>热点</li></a>
+                    <a href="#"><li>个人中心</li></a>
+                </ul>
+            </div>
+
+                <div class="left">
+                    <div class="app marg1">
+                        <img src="../static/img/shouji.png" alt="">
+                        <span>APP下载</span>
+                    </div>
+                    <div class="input marg">
+                        <input type="text" placeholder="请输入影视剧">
+                        <img src="../static/img/sousuo.png" alt="">
+                    </div>
+                    <div class="yh">
+                        <img src="../static/img/yonghu.png" alt="" onclick="login_click()">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <!-- preloader section -->
+    <div class="preloader ">
+        <div class="sk-spinner sk-spinner-wordpress ">
+            <span class="sk-inner-circle "></span>
+        </div>
+    </div>
+
+    <!-- header section -->
+    <div class="user_img">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-12 col-sm-12 ">
+                    <img src="../static/img/tou.jpg " class="img-responsive img-circle tm-border " id="head_protrait" alt="templatemo easy profile ">
+                    <hr>
+                    <h1 class="tm-title bold shadow " id="user_name">游客</h1>
+                    <br>
+                    <h1 class="white bold shadow ">欢迎来到芥子</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- about and skills section -->
+    <section class="container ">
+        <div class="row ">
+            <div class="col-md-6 col-sm-12 ">
+                <div class="about ">
+                    <h2 class="accent ">介绍</h2>
+                    <h3>芥子个人博客</h3>
+                    <p>芥子纳须弥，芥子有一即是全的意思，古人云，道生一，一生二，二生三，三生万物。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 ">
+                <div class="skills ">
+                    <h2 class="white ">技能</h2>
+                    <strong>ps</strong>
+                    <span class="pull-right ">40%</span>
+                    <div class="progress ">
+                        <div class="progress-bar progress-bar-primary " role="progressbar " aria-valuenow="70 " aria-valuemin="0 " aria-valuemax="100 " style="width: 70%; "></div>
+                    </div>
+                    <strong>前端</strong>
+                    <span class="pull-right ">25%</span>
+                    <div class="progress ">
+                        <div class="progress-bar progress-bar-primary " role="progressbar " aria-valuenow="85 " aria-valuemin="0 " aria-valuemax="100 " style="width: 85%; "></div>
+                    </div>
+                    <strong>摄影</strong>
+                    <span class="pull-right ">5%</span>
+                    <div class="progress ">
+                        <div class="progress-bar progress-bar-primary " role="progressbar " aria-valuenow="95 " aria-valuemin="0 " aria-valuemax="100 " style="width: 95%; "></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- education and languages -->
+    <section class="container ">
+        <div class="row ">
+            <div class="col-md-8 col-sm-12 ">
+                <div class="education ">
+                    <h2 class="white ">学历</h2>
+                    <div class="education-content ">
+                        <h4 class="education-title accent ">毕业院校:</h4>
+                        <div class="education-school ">
+                            <h5>家里蹲</h5><span></span>
+                            <h5>2021/7/28 </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 ">
+                <div class="languages ">
+                    <h2>语言</h2>
+                    <ul>
+
+                        <li>中文/ 母语</li>
+                        <li>英语 / 一生之敌</li>
+                        <li>日语 / 三脚猫</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact and experience -->
+    <section class="container ">
+        <div class="row ">
+            <div class="col-md-4 col-sm-12 ">
+                <div class="contact ">
+                    <h2>联系方式</h2>
+                    <p><i class="fa fa-map-marker "></i> 123456789</p>
+                    <p><i class="fa fa-phone "></i> qq:123456789</p>
+                    <p><i class="fa fa-envelope "></i>123456@163.com</p>
+                    <p><i class="fa fa-globe "></i> www.jiezi.com</p>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12 ">
+                <div class="experience ">
+                    <h2 class="white ">工作经验</h2>
+                    <div class="experience-content ">
+
+                        <p class="education-description ">空白</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="user_info">
+        <!--    历史记录-->
+        <div class="watch_history">
+            <div class="text">
+                <div>
+                    <h2><a href="">观看历史</a></h2>
+                    <span><a href="">全部></a></span>
+                </div>
+           </div>
+            <div class="slideshow">
+                <ul class="movies">
+                    <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                     <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                     <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                    <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                    <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                     <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                </ul>
+                <div class="slide_nums">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                </div>
+                <div class="left"><p><</p></div>
+                <div class="right"><p> > </p></div>
+            </div>
+        </div>
+        <!--    收藏-->
+        <div class="watch_history">
+            <div class="text">
+                <div>
+                    <h2><a href="">我的收藏</a></h2>
+                    <span><a href="">全部></a></span>
+                </div>
+           </div>
+            <div class="slideshow">
+                <ul class="movies">
+                    <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                     <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                     <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                    <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                    <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                     <li class="movie-item">
+                        <div class="map">
+                        <a href=""><img
+                            src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"
+                            alt="">
+                        </a>
+                    </div>
+                    </li>
+                </ul>
+                <div class="slide_nums">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                </div>
+                <div class="left"><p><</p></div>
+                <div class="right"><p> > </p></div>
+            </div>
+        </div>
+        <!--    设置-->
+        <div class="user_setting">
+            <h1>设置</h1>
+        <!--        个人信息修改-->
+            <div class="change_info">
+                <ul>
+                    <li id="alter_password">修改密码</li>
+                    <li>修改昵称</li>
+                    <li id="update_img">修改头像</li>
+                    <li id="logout_user">注销账号</li>
+                    <li id="exiting">退出</li>
+                </ul>
+            </div>
+            <!-- 弹框-修改密码或者注销账号 -->
+            <div class="modal">
+                <div class="cont">
+                    <h1>修改密码</h1>
+                    <div class="password_auth">
+                        <div id="user_account">
+                            <span>账号 ：</span>
+                            <span><input type="text"></span>
+                        </div>
+                        <div id="user_password">
+                            <sapn>密码 ：</sapn>
+                            <span> <input type="password"></span>
+                        </div>
+                        <div id="change_password">
+                            <span>新密码：</span>
+                            <span> <input type="password"></span>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="confirm">确定</button>
+                        <button class="cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+<!--            头像修改-->
+            <div class="form">
+                <div class="cont">
+                    <div class="item">
+                        <div class="img_size">
+                             <img src="../static/img/tou.jpg" id="avatar" onclick="$(this).next().click();"
+                        onerror="this.src='../static/img/tou.jpg'">
+<!--                        onerror:图片发生错误时使用src代替-->
+                        </div>
+                    <input type="file" id="btn-file" onchange="inputFile(this)" accept="image/*">
+                </div>
+                    <button id="img_save" type="button">保存</button>
+                    <button id="img_cancel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <div class="tail">
+    </div>
+    <!-- javascript js -->
+    <script src="../static/js/jquery-1.11.2.min.js "></script>
+    <script src="../static/js/bootstrap.min.js "></script>
+    <script src="../static/js/jquery.backstretch.min.js "></script>
+    <script type="text/javascript" src="../static/js/jquery.cookie.js"></script>
+<!--    <script src="../static/js/custom.js "></script>-->
+    <script>
+        // templatemo 467 easy profile
+        // PRELOADER
+        $(window).on('load',function () {
+            $('.preloader').delay(1000).fadeOut("slow"); // set duration in brackets
+        })
+
+        // HOME BACKGROUND SLIDESHOW
+        $(function() {
+        jQuery(document).ready(function() {
+            $('body').backstretch([
+                "../static/img/tm-bg-slide-1.png",
+                "../static/img/tm-bg-slide-2.jpg",
+                "../static/img/tm-bg-slide-3.jpg"
+            ], { duration: 3200, fade: 1300 });
+        });
+        })
+    </script>
+    <!--修改信息设置-->
+    <script>
+        <!--点击修改信息按钮跳出弹窗-->
+        $("#alter_password").on("click",function () {
+            $(".modal").css("display","block");
+        })
+
+        // 弹出窗口，点击确定验证密码是否正确，如果正确则让窗口消失
+        $(".confirm").on("click",function () {
+           var user= $("#user_account input").val();
+           var password=$("#user_password").val();
+           var new_password=$("change_password").val();
+           // 返回后端，跟数据库中的数据对比
+            var data={
+                "user":user,
+                "password":password,
+                "new_password":new_password
+            };
+            $.post('#',data,function (return_data) {
+                //根据返回的数据判断是否可以修改
+                //data{code,info},返回状态和信息
+                if(return_data["code"]==-1){
+                    alter(return_data["info"])
+                }
+                else{
+                    $(".modal").css("display","none");
+                }
+            })
+        })
+        $(".cancel").on("click",function () {
+            $(".modal").css("display","none");
+            $(".cont h1").text("修改密码");
+             $("#change_password").css("display","block");
+             $(".confirm").text("确定");
+        })
+        //注销用户
+        $("#logout_user").on("click",function () {
+             $(".modal").css("display","block");
+             $(".cont h1").text("用户验证");
+             $("#change_password").css("display","none");
+             $(".confirm").text("注销");
+             $(".confirm").on("click",function () {
+                 var user= $("#user_account input").val();
+                 var password=$("#user_password").val();
+                 var data={
+                    "user":user,
+                    "password":password
+                 };
+                 $.post('#',data,function (return_data) {
+                    //根据返回的数据判断是否可以修改
+                    //data{code,info},返回状态和信息
+                    if(return_data["code"]==-1){
+                        alter(return_data["info"])
+                    }
+                    else{
+                        // console.log("qeigfaf")
+                        $(".modal").css("display","none");
+                         $(".cont h1").text("修改密码");
+                         $("#change_password").css("display","block");
+                         $(".confirm").text("确定");
+                    }
+                 })
+             })
+        })
+        //更新头像
+        $("#update_img").on("click",function () {
+            $(".form").css("display","block");
+        })
+        // 退出
+        $("#exiting").on("click",function () {
+            //删除cookie
+            $.cookie("username",null);
+            $.cookie("password",null);
+            alert("用户已退出！")
+        })
+    </script>
+<!--图片修改-->
+    <script>
+        //选择文件完毕的回调
+       function inputFile(obj) {
+            const file = obj.files[0];
+            console.log("a_file:",file)
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+                console.log("a_file1:",this.result)
+                $("#avatar").attr("src", this.result);
+            }
+        }
+        //取消
+        $("#img_cancel").on("click",function () {
+            $(".form").css("display","none");
+        })
+        //提交表单数据
+        $("#img_save").on("click",function () {
+            saveInfo()
+        })
+        function saveInfo(){
+                //jquery对象转js对象
+                const avatarFile = $('#btn-file')[0].files[0];
+                // console.log("upfile:",avatarFile)
+                var reader = new FileReader();
+                reader.readAsDataURL(avatarFile);
+                reader.onload = function () {
+                console.log("a_file1:",this.result)
+                $("#head_protrait").attr("src", this.result);
+                $(".form").css("display","none");
+
+            }
+                // var form = new FormData();
+                // form.append('name', $('#name').val());
+                // form.append('avatar', avatarFile);
+                // form.append('mobile', $('#mobile').val());
+                // form.append('unit', $('#unit').val());
+                //
+                // form.append('email', $('#email').val());
+                //
+                // postRequest("UpdateUserInfo", form, (result)=>{
+                //        location.reload(true)
+                // })
+        }
+    </script>
+<!--读取用户信息-->
+    <script>
+         //获取用户信息
+        var name=$.cookie("username")
+        console.log(name)
+        //渲染用户名
+         if(name=="null"){
+             $("#user_name").text("游客")
+         }
+         else{
+             $("#user_name").text(name)
+         }
+    </script>
+</body>
+
+</html>

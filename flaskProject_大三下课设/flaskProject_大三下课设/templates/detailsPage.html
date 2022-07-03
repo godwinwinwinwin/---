@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>电影介绍</title>
+    <meta name="referrer"  content="never">
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/css/details.css">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/Normal%20flow.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="contai">
+            <div class="img clearfix">
+                <div class="right">
+                <img src="../static/img/logo.png" alt="猫眼电影">
+                <ul>
+                    <a href="./index.html"><li>首页</li></a>
+                    <a href="movie.html"><li class="color">电影</li></a>
+                    <a href="./cinema.html"><li>影院</li></a>
+                    <a href=""><li>演出</li></a>
+                    <a href="./list.html"><li>榜单</li></a>
+                    <a href="./hotspot.html"><li>热点</li></a>
+                    <a href=""><li>商城</li></a>
+                </ul>
+            </div>
+
+                <div class="left">
+                    <div class="app marg1">
+                        <img src="../static/img/shouji.png" alt="">
+                        <span>APP下载</span>
+                    </div>
+                    <div class="input marg">
+                        <input type="text" value="请输入影视剧">
+                        <img src="../static/img/sousuo.png" alt="">
+                    </div>
+                    <div class="yh">
+                        <img src="../static/img/yonghu.png" alt="" onclick="login_click()">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <!-- 主要部分 -->
+    <div id="wrapper">
+        <!-- 中间部分 -->
+        <div id="content">
+            <h1>
+                <span property="v:itemreviewed">{{ data[1] }}</span>
+                <span class="year">({{ data[8] }})</span>
+            </h1>
+            <div class="grid-16-8 clearfix">
+                <div class="article">
+                    <div class="indent clearfix">
+                        <div class="subjectwrap clearfix">
+                            <div class="subject clearfix">
+                                <div id="mainpic" class="">
+                                    <a class="nbgnbg" href="#" title="点击看更多海报">
+<!--                                        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2874262709.webp" title="点击看更多海报" alt="" rel="v:image">-->
+                                        <img src="{{ data[9] }}" title="点击看更多海报" alt="" rel="v:image">
+                                    </a>
+                                </div>
+                                <div id="info">
+                                    <span id="director">
+                                        <span class="pl">导演</span>:
+                                        <span class="attrs">
+                                            <a href="#" rel="v:directedBy">{{data[3]}}</a>
+                                        </span>
+                                    </span>
+                                    <br>
+                                    <span class="actor">
+                                        <span class="pl">主演</span>:
+                                        <span class="attrs">
+                                            <span>
+                                                <a href="" rel="v:starring">{{data[4]}}</a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <br>
+                                    <span id="types">
+                                        <span>类型:</span>
+                                        <span property="v:genre">{{data[7]}}</span>
+                                    </span>
+                                    <br>
+                                    <span class="pl">制片国家/地区:{{data[6]}}</span>
+                                    <br>
+                                    <span class="pl">语言:{{ data[5] }}</span>
+                                    <br>
+                                    <span class="pl">
+                                        <span >上映日期:</span>
+                                        <span property="v:initialReleaseDate" content="{{data[8]}}">{{data[8]}}</span>
+                                    </span>
+                                    <br>
+                                    <span class="pl">
+                                        <span>片长:</span>
+                                        <span property="v:runtime" content="118">{{data[10]}}</span>
+                                    </span>
+                                    <br>
+                                </div>
+                            </div>
+                            <div id="interest_sectl">
+                                <div class="rating_wrap clearbox" rel="v:rating">
+                                    <div class="clearfix">
+                                        <div class="rating_logo ll">
+                                            豆瓣评分
+                                        </div>
+                                    </div>
+                                    <div class="rating_self clearfix" typeof="v:Rating">
+                                        <strong class="ll rating_num" property="v:average">{{data[11]}}</strong>
+                                        <span property="v:best" content="10.0"></span>
+                                        <div class="rating_right ">
+                                            <div class="ll bigstar bigstar35"></div>
+                                            <div class="rating_sum">
+                                                <a style="font-size:18px"href="collections" class="rating_people">
+                                                    <span property="v:votes">1002</span>人评价</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-info" style="margin-bottom:-10px;margin-top:10px">
+                        <a name="intro"></a>
+                        <h2>
+                            <i class="intro" style="font-size:18px">{{ data[1] }}的剧情简介</i>
+                            · · · · · ·
+                        </h2>
+                        <br>
+                        <div class="indent" id="link-report">
+
+                            <span property="v:summary" class="">
+                                &nbsp;&nbsp;&nbsp;&nbsp; {{data[12]|safe}}
+                            </span>
+                            <span class="pl">
+                                <a href="/">©豆瓣</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="recommendations" class="">
+                        <h2>
+                            <i class="" style="font-size:18px">喜欢这部电影的人也喜欢</i>
+                            · · · · · ·
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

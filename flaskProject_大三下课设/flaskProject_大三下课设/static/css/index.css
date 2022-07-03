@@ -1,0 +1,144 @@
+body{
+    background-color: #f7f8fa;
+}
+
+.header .contai .img ul .color{
+    color: #fff;
+    background: #f40;
+}
+/* 中部区域 */
+.panel{
+    width:90%;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 4%);
+    background-color:rgba(255,255,255,.9);
+    border-radius: 20px;
+    margin:0 auto;
+}
+.text{
+    height: 30px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.text div{
+    margin: 0 10px;
+}
+ .text div h2{
+    display: inline;
+    font-size: 26px;
+    font-weight: 400;
+    color: #1d2129;
+    font-weight: bold;
+}
+.text div span{
+    float: right;
+    color: #1d2129;
+    font-weight: bold;
+    margin-right:65px;
+}
+
+.text div span:hover{
+    color:slateblue;
+}
+.middle{
+    width: 90%;
+    margin: 1em auto;
+    text-align: center;
+}
+
+
+.middle .movie-item{
+    float: left;
+    width: 190px;
+    height: 295px;
+    margin-right: 26px;
+    margin-bottom: 25px;
+}
+
+.middle .movie-item:nth-child(5n){
+    margin-right: 0px;
+}
+
+
+.middle .movie-item .figure{
+    color: #ffb400;
+}
+
+.middle .movie-item .frame a{
+    color: #999;
+    width: 80px;
+    height: 40px;
+}
+.middle .movie-item .frame span{
+    color: #999;
+}
+
+.middle .movie-item .txt{
+  margin: 2px;
+
+}
+
+.middle .movie-item .figure{
+   margin: 2px;
+}
+.middle .movie-item .date{
+    margin: 10px;
+    color: #999;
+
+  }
+
+  .middle .movie-item .map img{
+        width: 160px;
+        height: 220px;
+  }
+
+
+/* 中部区域结束*/
+
+/* 热播电影区域 */
+.uder{
+    width: 80%;
+    height: 40px;
+    margin: 2em auto;
+
+}
+.uder .text-ch ul li{
+    float: left;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+.uder .text-ch ul a:hover{
+    background-color: #ccc;
+    color: #f40;
+    border-radius: 20%;
+}
+
+.uder .text-ch ul .color{
+    font-size: 26px;
+    font-weight: 400;
+    color: rgb(239,66,56);
+    margin-top: 30px;
+}
+
+.uder .text-ch ul .right{
+    float: right;
+    color: rgb(239,66,56);
+    margin-right:100px;
+}
+
+/*电影类型选择区域*/
+.select{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+.select a{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin:0 15px;
+}
+.select a:hover{
+    color: #fff;
+    border: 1px solid #f40;
+    background-color: #f40;
+}

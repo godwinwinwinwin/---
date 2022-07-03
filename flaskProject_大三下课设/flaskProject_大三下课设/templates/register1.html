@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/login1.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please Register</h1>
+      <form>
+        <div class="form-control">
+          <input id="email" type="text" required>
+          <label>Email</label>
+          <!-- <label>
+            <span style="transition-delay: 0ms">E</span>
+              <span style="transition-delay: 50ms">m</span>
+              <span style="transition-delay: 100ms">a</span>
+              <span style="transition-delay: 150ms">i</span>
+              <span style="transition-delay: 200ms">l</span>
+        </label> -->
+        </div>
+
+        <div class="form-control">
+          <input id="password" type="password" required>
+          <label>Password</label>
+        </div>
+
+        <button type="button" class="btn" ><span id="register">Register</span></button>
+
+        <p class="text">You have an account <a href="#">login</a> </p>
+      </form>
+    </div>
+    <script src="../static/js/login1.js"></script>
+    <script type="text/javascript" src="../static/js/jquery-1.11.2.min.js"></script>
+    <script>
+              //判断注册是否成功
+              $(".btn").on("click", function(){
+                console.log("-----------")
+                  //获取用户输入的信息
+                  var email1=document.getElementById("email").value;
+                  var password1=document.getElementById("password").value;
+                  var data={
+                          "name":email1,
+                          "password":password1
+                      };
+                  console.log(data);
+                  console.log("njgsnrvk")
+                  $.post("/register_To_database",data,function(data){
+                      alert(data["info"])
+                  });
+              })
+          </script>
+  </body>
+</html>

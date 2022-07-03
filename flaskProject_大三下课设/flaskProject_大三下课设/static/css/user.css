@@ -1,0 +1,530 @@
+@charset "UTF-8";
+html,
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Proxima";
+}
+html a,
+body a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+.main {
+  overflow-x: hidden;
+  position: relative;
+  vertical-align: baseline;
+}
+.main h1 {
+  font-size: 40px;
+}
+.main h2 {
+  font-size: 36px;
+}
+.main h3 {
+  font-size: 30px;
+}
+.main h4 {
+  font-size: 24px;
+}
+.main h5 {
+  font-size: 20px;
+}
+.main h6 {
+  font-size: 18px;
+}
+.main h2 {
+  padding-bottom: 14px;
+}
+
+.user_img {
+  text-align: center;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 160px;
+  padding-bottom: 140px;
+}
+.user_img img {
+  display: inline-block !important;
+  width: 410px;
+  height: 410px;
+  overflow: hidden;
+}
+.user_img h2 {
+  padding-top: 40px;
+}
+.user_img hr {
+  border-color: #3366CC;
+  width: 100px;
+}
+
+.accent {
+  font-family: "Proxima Bold";
+  line-height: 14px;
+  color: #60A9F0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.tm-border {
+  border: 5px solid #fff;
+  box-shadow: 2px 2px #000;
+}
+
+.shadow {
+  text-shadow: 1px 1px #000;
+}
+
+.tm-title {
+  color: #66CCFF;
+}
+
+.white {
+  color: #fff;
+}
+
+.about,
+.skills,
+.education,
+.languages,
+.contact,
+.experience {
+  padding: 40px;
+  min-height: 330px;
+}
+
+.education,
+.languages,
+.contact,
+.experience {
+  margin-top: 30px;
+}
+
+.copyrights {
+  text-indent: -9999px;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+}
+
+/* preloader section */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #f9f9f9;
+}
+
+.sk-spinner-wordpress.sk-spinner {
+  background-color: #3366CC;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: relative;
+  -webkit-animation: sk-innerCircle 1s linear infinite;
+  animation: sk-innerCircle 1s linear infinite;
+}
+
+.sk-spinner-wordpress .sk-inner-circle {
+  display: block;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 8px;
+  top: 5px;
+  left: 5px;
+}
+
+@-webkit-keyframes sk-innerCircle {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes sk-innerCircle {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* about section */
+.about {
+  background: #fff;
+  box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.08);
+}
+.about h2, .about h3 {
+  margin-bottom: 10px;
+}
+
+/* skills section */
+.skills {
+  background: #3366CC;
+  color: #f5f5f5;
+}
+
+.skills .progress {
+  border-radius: 0px;
+  height: 4px;
+}
+
+.skills .progress .progress-bar-primary {
+  background: #204090;
+}
+
+.skills strong {
+  display: inline-block;
+  font-weight: normal;
+  padding-bottom: 6px;
+}
+
+/* education section */
+.education {
+  background: #3366CC;
+  color: #f5f5f5;
+}
+
+.education .education-content {
+  padding-bottom: 14px;
+}
+
+.education h5 {
+  display: inline-block;
+}
+
+.education span {
+  padding-right: 10px;
+  padding-left: 20px;
+}
+
+/* languages section */
+.languages {
+  background: #fff;
+  box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.08);
+}
+
+.languages ul {
+  padding: 10px;
+}
+
+.languages ul li {
+  padding-bottom: 6px;
+}
+
+/* contact section */
+.contact {
+  background: #fff;
+  box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.08);
+}
+
+.contact .fa {
+  padding-right: 6px;
+}
+
+/* experience section */
+.experience {
+  background: #3366CC;
+  color: #f5f5f5;
+}
+
+.experience .experience-content {
+  padding-bottom: 14px;
+}
+
+.experience h5 {
+  display: inline-block;
+}
+
+.experience span {
+  padding-right: 10px;
+  padding-left: 20px;
+}
+
+.user_info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*观看历史*/
+.watch_history {
+  height: 360px;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.04);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+}
+
+.watch_history .movies {
+  height: 230px;
+  /*background-color:darkblue;*/
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.text {
+  height: 30px;
+  width: 80%;
+  margin: 20px auto;
+  padding-top: 15px;
+}
+
+.text div h2 {
+  display: inline;
+  font-size: 26px;
+  font-weight: 400;
+  color: #2d98f3;
+  font-weight: bold;
+}
+
+.text div span {
+  float: right;
+  color: #2d98f3;
+  font-weight: bold;
+  margin-right: 65px;
+}
+
+.movies .movie-item {
+  float: left;
+  width: 190px;
+  height: 295px;
+  margin-left: 44px;
+  margin-bottom: 25px;
+}
+
+.movies .movie-item .figure {
+  color: #ffb400;
+}
+
+.movies .movie-item .frame a {
+  color: #999;
+  width: 80px;
+  height: 40px;
+}
+
+.movies .movie-item .map img {
+  width: 160px;
+  height: 220px;
+}
+
+.slideshow {
+  overflow: hidden;
+  height: 270px;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.slide_nums {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.slide_nums span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #2d98f3;
+  line-height: 30px;
+  margin-right: 50px;
+}
+
+.slideshow .left {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #2d98f3;
+}
+
+.slideshow .right {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #2d98f3;
+}
+
+.slideshow .left p {
+  font-size: 40px;
+}
+
+.slideshow .right p {
+  font-size: 40px;
+}
+
+.user_setting {
+  margin-top: 40px;
+  height: 200px;
+  width: 100%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.04);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+.user_setting h1 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.user_info .change_info {
+  width: 50%;
+  background-color: #509fc9;
+  text-align: center;
+  margin: 20px auto;
+  border: 2px;
+  border-radius: 6px;
+}
+
+.user_info .change_info li {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.user_info .change_info li:hover {
+  color: red;
+}
+
+/* 修改弹框 */
+.modal {
+  position: fixed;
+  width: 60%;
+  height: 100%;
+  left: 20%;
+  top: 0;
+  /*z-index: 1;*/
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.modal h1 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal .cont {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.modal .cont .password_auth div {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.confirm,
+.cancel {
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  background: #10B4FF;
+  outline: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #fff;
+  margin: 0px 30px;
+}
+
+.user_setting .form {
+  position: fixed;
+  width: 60%;
+  height: 100%;
+  left: 20%;
+  top: 0;
+  /*z-index: 1;*/
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.form .cont {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+.form .cont .item {
+  text-align: center;
+}
+.form .cont .item .img_size {
+  width: 410px;
+  height: 410px;
+  overflow: hidden;
+}
+.form .cont button {
+  margin-right: 10px;
+  background-color: #10B4FF;
+}
+.form .cont button:hover {
+  color: red;
+}
+
+/*# sourceMappingURL=user.css.map */

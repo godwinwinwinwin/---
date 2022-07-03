@@ -1,0 +1,197 @@
+/* 导航区域 */
+.header .contai .img img{
+    width: 260px;
+    height: 70px;
+    float: left;
+}
+.header .contai .img ul li{
+    float: left;
+    padding: 0 10px;
+}
+
+.header .contai .img ul li:hover{
+    color: #fff;
+    background: #f40;
+}
+
+.header .contai .img ul .color{
+    color: #fff;
+    background: #f40;
+}
+
+.header .contai .img .left div{
+    float: left;
+}
+
+.header .contai .img .left .app img{
+    width: 35px;
+    height: 35px;
+    margin-top: 16px;
+}
+
+.header .contai .img .left .marg1{
+    margin-left: 115px;
+}
+.header .contai .img .left .marg{
+    margin-left: 30px;
+}
+.header .contai .img .left .input{
+    position: relative;
+}
+
+.header .contai .img .left .input input{
+    width: 220px;
+    height: 29px;
+    border-style: double;
+    border-radius: 20px;
+    color: #999;
+
+}
+.header .contai .img .left .input input:focus{
+    outline: 0  solid  #000;
+}
+
+.header .contai .img .left .input img{
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-radius: 20px;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    cursor: pointer;
+}
+.header .contai .img .left .yh img{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 45px;
+}
+
+/* 中部区域 */
+.text{
+    height: 30px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.text div{
+    margin: 0 10px;
+}
+ .text div h2{
+    display: inline;
+    font-size: 26px;
+    font-weight: 400;
+    color: #2d98f3;
+    font-weight: bold;
+}
+.text div span{
+    float: right;
+    color: #2d98f3;
+    font-weight: bold;
+    margin-right:65px;
+}
+.movies{
+    width: 80%;
+    margin: 1em auto;
+    text-align: center;
+}
+
+
+.movies .movie-item{
+    float: left;
+    width: 190px;
+    height: 295px;
+    margin-right: 26px;
+    margin-bottom: 25px;
+}
+
+.movies .movie-item:nth-child(5n){
+    margin-right: 0px;
+}
+
+
+.movies .movie-item .figure{
+    color: #ffb400;
+}
+
+.movies .movie-item .frame a{
+    color: #999;
+    width: 80px;
+    height: 40px;
+}
+.movies .movie-item .frame span{
+    color: #999;
+}
+
+.movies .movie-item .txt{
+  margin: 2px;
+
+}
+
+.movies .movie-item .figure{
+   margin: 2px;
+}
+.movies .movie-item .date{
+    margin: 10px;
+    color: #999;
+
+  }
+
+  .movies .movie-item .map img{
+        width: 160px;
+        height: 220px;
+  }
+
+
+/* 中部区域结束*/
+
+/* 热播电影区域 */
+.uder{
+    width: 80%;
+    height: 40px;
+    margin: 2em auto;
+
+}
+.uder .text-ch ul li{
+    float: left;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+.uder .text-ch ul a:hover{
+    background-color: #ccc;
+    color: #f40;
+    border-radius: 20%;
+}
+
+.uder .text-ch ul .color{
+    font-size: 26px;
+    font-weight: 400;
+    color: rgb(239,66,56);
+    margin-top: 30px;
+}
+
+.uder .text-ch ul .right{
+    float: right;
+    color: rgb(239,66,56);
+    margin-right:100px;
+}
+
+/*电影类型选择区域*/
+.select{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+.select a{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin:0 15px;
+}
+.select a:hover{
+    color: #fff;
+    border: 1px solid #f40;
+    background-color: #f40;
+}
+
+

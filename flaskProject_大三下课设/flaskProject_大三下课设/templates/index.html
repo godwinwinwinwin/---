@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer"  content="never">
+    <title>a贵电影推荐系统</title>
+    <link rel="icon" href="../static/ico.ico">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/Normal flow.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="contai">
+            <div class="img clearfix">
+                <div class="right">
+                <img src="../static/img/logo1.png" alt="猫眼电影">
+                <ul>
+                    <a href="/"><li class="color">首页</li></a>
+                    <a href="movie.html"><li class="movie_color">电影</li></a>
+                    <a href="./cinema.html"><li>影院</li></a>
+                    <a href=""><li>演出</li></a>
+                    <a href="/list_movie"><li>榜单</li></a>
+                    <a href="./hotspot.html"><li>热点</li></a>
+                    <a href="/user_mid"><li>个人中心</li></a>
+                </ul>
+            </div>
+
+                <div class="left">
+                    <div class="app marg1">
+                        <img src="../static/img/shouji.png" alt="">
+                        <span>APP下载</span>
+                    </div>
+                    <div class="input marg">
+                        <input type="text" value="请输入影视剧">
+                        <img src="../static/img/sousuo.png" alt="">
+                    </div>
+                    <div class="yh">
+                        <img src="../static/img/yonghu.png" alt="" onclick="login_click()">
+                    </div>
+                    <h6>{{login_status}}</h6>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <!-- 图片展示 -->
+
+    <!-- 最近上映的电影 -->
+    <div class="panel" id="hot_movie">
+        <div class="text">
+        <div>
+            <h2><a href="">豆瓣top250电影</a></h2>
+            <span><a href="">全部</a>></span>
+        </div>
+    </div>
+        <div class="middle clearfix">
+            {% for d in hot_movie %}
+            <div class="movie-item">
+                <div class="map">
+                    <a href="/details/{{d[0]}}"><img
+                            src="{{d[2]}}"
+                            alt=""></a>
+                </div>
+                <div class="txt">
+                   {{d[1]}}
+                </div>
+                <div class="figure">1160人想看</div>
+                <div class="frame">
+                    <a href="" class="a">预告片</a>
+                    <span>丨</span>
+                    <a href="" class="a1">预&nbsp&nbsp售</a>
+                </div>
+                <div class="date">
+                    {{d[8]}}
+                </div>
+            </div>
+                {% endfor %}
+        </div>
+    </div>
+    <!-- 豆瓣top250电影 -->
+    <div class="panel" id="top250">
+        <div class="text">
+        <div>
+            <h2><a href="">豆瓣top250电影</a></h2>
+            <span><a href="">全部</a>></span>
+        </div>
+    </div>
+        <div class="middle clearfix">
+            {% for d in top250 %}
+            <div class="movie-item">
+                <div class="map">
+                    <a href="/details/{{d[0]}}"><img
+                            src="{{d[9]}}"
+                            alt=""></a>
+                </div>
+                <div class="txt">
+                   {{d[1]}}
+                </div>
+                <div class="figure">1160人想看</div>
+                <div class="frame">
+                    <a href="" class="a">预告片</a>
+                    <span>丨</span>
+                    <a href="" class="a1">预&nbsp&nbsp售</a>
+                </div>
+                <div class="date">
+                    {{d[8]}}
+                </div>
+            </div>
+                {% endfor %}
+        </div>
+    </div>
+
+    <!--    猜你喜欢,如果是游客就推荐最近上映电影-->
+    <div class="panel" id="like_movie">
+        <div class="text">
+        <div>
+            <h2><a href="">猜你喜欢</a></h2>
+            <span><a href="">全部</a>></span>
+        </div>
+    </div>
+        <div class="middle clearfix">
+            {% for d in data %}
+            <div class="movie-item">
+                <div class="map">
+                    <a href="/details/{{d[0]}}"><img
+                            src="{{d[9]}}"
+                            alt=""></a>
+                </div>
+                <div class="txt">
+                   {{d[1]}}
+                </div>
+                <div class="figure">1160人想看</div>
+                <div class="frame">
+                    <a href="" class="a">预告片</a>
+                    <span>丨</span>
+                    <a href="" class="a1">预&nbsp&nbsp售</a>
+                </div>
+<!--                <div class="date">-->
+<!--                    {{d[8]}}-->
+<!--                </div>-->
+            </div>
+                {% endfor %}
+        </div>
+    </div>
+    <!--  -->
+<!--    <div class="panel">-->
+<!--        <div class="uder clearfix">-->
+<!--        <div class="text-ch">-->
+<!--            <ul>-->
+<!--                <li class="color"><a href=""> 热播电影</a></li>-->
+<!--                <li><a href="">爱情</a></li>-->
+<!--                <li><a href="">喜剧</a></li>-->
+<!--                <li><a href="">动作</a></li>-->
+<!--                <li><a href="">恐怖</a></li>-->
+<!--                <li><a href="">动画</a></li>-->
+<!--                <li class="right"><a href=""> 全部></a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--        <div class="middle clearfix">-->
+
+<!--        &lt;!&ndash;根据返回的数据渲染页面 &ndash;&gt;-->
+<!--        &lt;!&ndash;-->
+<!--        for movie in movies-->
+<!--         <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="movie.img_src"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--            //movie.name //(该处使用大挂号)-->
+<!--            </div>-->
+<!--            <div class="figure">1160人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                5月28日上映-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &ndash;&gt;-->
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p0.meituan.net/moviemachine/f31b925aa6febc11140adbba4b966b3f8269247.jpg@160w_220h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                亲亲哒-->
+<!--            </div>-->
+<!--            <div class="figure">1160人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                5月28日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p0.meituan.net/moviemachine/e10ceb90d2c06d3524d01d573ccf88fb7514998.jpg@160w_220h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                金禅降魔-->
+<!--            </div>-->
+<!--            <div class="figure">17747人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                5月8日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p1.meituan.net/movie/7082cc598a3060d5d7d24b5237fc18d83930467.jpg@160w_220h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                我在时间的尽头等你-->
+<!--            </div>-->
+<!--            <div class="figure">70116人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                5月28日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p0.meituan.net/movie/88dff6a7d97c6a91a125cece93ba72411017894.jpg@218w_300h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                西游记真假美猴王-->
+<!--            </div>-->
+<!--            <div class="figure">340711人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                5月22日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p1.meituan.net/movie/c572b29ae9a38ef13c86df725a2d7dc413986557.jpg@218w_300h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                绝地战警：急速追击-->
+<!--            </div>-->
+<!--            <div class="figure">30545人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                7月2日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p0.meituan.net/movie/1907a5af889e44236fd80952980d36e13257090.jpg@218w_300h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                82号古宅-->
+<!--            </div>-->
+<!--            <div class="figure">8185人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                5月28日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p0.meituan.net/movie/1f36ef4b51a4bf690946bb1239ad4b161956602.jpg@218w_300h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                征途-->
+<!--            </div>-->
+<!--            <div class="figure">15452人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                5月28日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p0.meituan.net/movie/ccea56ae49249d482be5997aa98e94691344390.jpg@218w_300h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                拆弹专家-->
+<!--            </div>-->
+<!--            <div class="figure">45130人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                6月28日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p0.meituan.net/movie/0126ad5d628b7c55eb60a926ebc59d7b2823483.jpg@218w_300h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                刺杀小说家-->
+<!--            </div>-->
+<!--            <div class="figure">91314人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                5月28日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p0.meituan.net/movie/07b4127cff2289cd91b65628f4417ac37666558.jpg@160w_220h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                西游记之大圣归来-->
+<!--            </div>-->
+<!--            <div class="figure">24799人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                6月28日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p1.meituan.net/moviemachine/3b8ab40ddd5e499a6c2924f7c34b03702316978.jpg@160w_220h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                木兰：横空出世-->
+<!--            </div>-->
+<!--            <div class="figure">4560人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                4月20日上映-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="movie-item">-->
+<!--            <div class="map">-->
+<!--                <a href=""><img-->
+<!--                        src="https://p0.meituan.net/moviemachine/56714bf223954991175f333864454127651389.jpg@160w_220h_1e_1c"-->
+<!--                        alt=""></a>-->
+<!--            </div>-->
+<!--            <div class="txt">-->
+<!--                俑之城-->
+<!--            </div>-->
+<!--            <div class="figure">10360人想看</div>-->
+<!--            <div class="frame">-->
+<!--                <a href="" class="a">预告片</a>-->
+<!--                <span>丨</span>-->
+<!--                <a href="" class="a1">预&nbsp&nbsp售</a>-->
+<!--            </div>-->
+<!--            <div class="date">-->
+<!--                5月22日上映-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    </div>-->
+
+    <div class="select">
+        <a href="javascript:alert('这是第一页！')">上一页</a>
+        <a href="" class="color">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">6</a>
+        <a href="">下一页</a>
+    </div>
+
+    <div class="tail">
+    </div>
+</body>
+<!-- 登入 -->
+<script type="text/javascript" src="../static/js/jquery-1.11.2.min.js"></script>
+<script>
+    function login_click(){
+        window.location.href="/login";
+    }
+</script>
+</html>

@@ -1,0 +1,201 @@
+/* 清除浮动 */
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* 导航条 */
+.header {
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    background-color: #f7f8fa;
+    position:sticky;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+.header .container .logo img{
+    float: left;
+    width: 260px;
+    height: 70px;
+}
+.header .container .nav .color{
+    color: #fff;
+    background: #f40;
+}
+
+.header .container .nav ul a{
+    float: left;
+    width: 60px;
+    height: 80px;
+    text-align: center;
+}
+.header .container .nav ul a:hover{
+    background-color: #F40;
+    color: #fff;
+}
+
+.header .container .right .app img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    float: right;
+}
+.header .container .right .app span{
+    float: right;
+}
+.header .container .right .input{
+    float: right;
+    margin-left: 30px;
+    border-radius: 50%;
+}
+
+.header .container .right input{
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    border-color: #ccc;
+    float: right;
+    margin-top: 15px;
+    margin-left: 35px;
+} 
+.header .container .right .sousuo{
+    position: relative;
+}
+
+.header .container .right .sousuo img{
+    background: red;
+    border-radius: 50%;
+    width: 35px;
+    height: 36px;
+    float: right;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+}
+
+.header .container .right .use img{
+    width: 35px;
+    height: 35px;
+    float: right;
+    margin-right: -424px;
+    margin-top: 16px;
+}
+.header .container .right .use img a:hover{
+    width: 60px;
+    height: 120px;
+    border: 1px solid #CCC;
+}
+.header .container .right{
+    margin-right: 100px;
+}
+
+/* 导航区域 */
+.header .contai .img img{
+    width: 260px;
+    height: 70px;
+    float: left;
+}
+
+/*right*/
+.header .contai .img ul li{
+    float: left;
+    padding: 0 10px;
+}
+
+.header .contai .img ul li:hover{
+    color: #fff;
+    background: #f40;
+}
+/*.header .contai .img ul:active{*/
+/*    color: #fff;*/
+/*    background-color: #fff;*/
+/*}*/
+
+/*.header .contai .img ul:focus{*/
+/*    color: #fff;*/
+/*    background-color: #f40;*/
+/*}*/
+
+.header .contai .img .left div{
+    float: left;
+}
+
+.header .contai .img .left .app img{
+    width: 35px;
+    height: 35px;
+    margin-top: 16px;
+}
+
+.header .contai .img .left .marg1{
+    margin-left: 115px;
+}
+.header .contai .img .left .marg{
+    margin-left: 30px;
+    /*text-align: center;*/
+}
+.header .contai .img .left .input{
+    position: relative;
+}
+
+
+.header .contai .img .left .input input{
+    width: 220px;
+    height: 29px;
+    border-style: double;
+    border-radius: 20px;
+    color: #999;
+    /*text-align: center;*/
+}
+.header .contai .img .left .input input:focus{
+    outline: 0  solid  #000;
+}
+
+.header .contai .img .left .input img{
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-radius: 20px;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    cursor: pointer;
+}
+.header .contai .img .left .yh img{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 45px;
+}
+
+
+/* 页码 */
+.select{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+.select a{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin:0 15px;
+}
+.select a:hover{
+    color: #fff;
+    border: 1px solid #f40;
+    background-color: #f40;
+}
+
+/* 尾巴 */
+
+.tail{
+    height: 50px;
+    background: #262426;
+    margin-top:20px;
+}

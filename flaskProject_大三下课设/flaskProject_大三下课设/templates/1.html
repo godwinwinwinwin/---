@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../static/js/flv.js/flv.min.js"></script>
+</head>
+<body>
+    <video id="video" controls="controls" width="1080">
+    </video>
+    <br>
+    <input type="text" id="text"></input><button id="btn1">播放BvId</button><button id="btn2">播放直播源</button>
+    <script>
+        let video = document.getElementById('video');
+        let text = document.getElementById("text");
+        function play(url){
+            let flvPlayer = flvjs.createPlayer({//设置 资源
+                type: 'flv',
+                url: url
+            });
+            flvPlayer.attachMediaElement(video);//附加到video元素
+            flvPlayer.load();//加载
+            flvPlayer.play();
+        }
+        document.getElementById("btn1").onclick = function () {
+            play(`https://www.bilibili.com/video/BV1qx41167J9?t=2.3${text.value}`);
+        };
+        document.getElementById("btn2").onclick = function () {
+            play(text.value);
+        };
+    </script>
+</body>
+
+</html>

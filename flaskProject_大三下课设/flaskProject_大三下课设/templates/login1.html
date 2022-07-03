@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/login1.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please Login</h1>
+      <form>
+        <div class="form-control">
+          <input id="email" type="text" required>
+          <label>Email</label>
+          <!-- <label>
+            <span style="transition-delay: 0ms">E</span>
+              <span style="transition-delay: 50ms">m</span>
+              <span style="transition-delay: 100ms">a</span>
+              <span style="transition-delay: 150ms">i</span>
+              <span style="transition-delay: 200ms">l</span>
+        </label> -->
+        </div>
+
+        <div class="form-control">
+          <input id="password" type="password" required>
+          <label>Password</label>
+        </div>
+
+        <button type="button" class="btn" onclick="login_click()">Login</button>
+
+        <p class="text">Don't have an account? <a href="#">Register</a> </p>
+      </form>
+    </div>
+    <script type="text/javascript" src="../static/js/jquery-1.11.2.min.js"></script>
+    <script src="../static/js/login1.js"></script>
+    <script>
+              //判断登录是否成功
+              function login_click(){
+                  //获取用户输入的信息
+                console.log("--------------")
+                  var email1=document.getElementById("email").value;
+                  var password1=document.getElementById("password").value;
+                  var data={
+                          "name":email1,
+                          "password":password1
+                      };
+                  console.log(data);
+
+                  $.post("/user_authentication",data,function(data){
+                      if(data["code"]==1){
+                        $.cookie("username",email1)
+                        $.cookie("password",password1)
+                        console.log("--------------")
+                        window.location.href="/";
+                      }
+                      else{
+                          alert(data["info"])
+                      }
+                  });
+              }
+          </script>
+  </body>
+</html>

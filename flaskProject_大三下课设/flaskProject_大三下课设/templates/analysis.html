@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript" src="../static/js/echarts.min.js"></script>
+    <script>
+    var chartDom = document.getElementById('main');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+      title: {
+          show:true,
+          text: "豆瓣评分前5电影",
+          x:'center',
+      },
+      xAxis: {
+        type: 'category',
+        data: [{{data[0]|tojson}}, {{data[2]|tojson}}, {{data[4]|tojson}}, {{data[6]|tojson}}, {{data[8]|tojson}}]
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          data: [{{data[1]}}, {{data[3]}}, {{data[5]}}, {{data[7]}}, {{data[9]}}],
+          type: 'bar',
+          showBackground: true,
+          backgroundStyle: {
+            color: 'rgba(180, 180, 180, 0.2)'
+          }
+        }
+      ]
+    };
+
+    option && myChart.setOption(option);
+</script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+html,
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Proxima';
+    overflow-x: hidden;
+    position: relative;
+    vertical-align: baseline;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+h2 {
+    padding-bottom: 14px;
+}
+
+/* header section */
+
+header {
+    text-align: center;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 160px;
+    padding-bottom: 140px;
+}
+
+header img {
+    display: inline-block !important;
+}
+
+header h2 {
+    padding-top: 40px;
+}
+
+header hr {
+    border-color: #3366CC;
+    width: 100px;
+}
+
+
+/* about section */
+
+.about {
+    background: #fff;
+    box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.08);
+}
+
+
+/* skills section */
+
+.skills {
+    background: #3366CC;
+    color: #f5f5f5;
+}
+
+.skills .progress {
+    border-radius: 0px;
+    height: 4px;
+}
+
+.skills .progress .progress-bar-primary {
+    background: #204090;
+}
+
+.skills strong {
+    display: inline-block;
+    font-weight: normal;
+    padding-bottom: 6px;
+}
+
+
+/* education section */
+
+.education {
+    background: #3366CC;
+    color: #f5f5f5;
+}
+
+.education .education-content {
+    padding-bottom: 14px;
+}
+
+.education h5 {
+    display: inline-block;
+}
+
+.education span {
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+
+/* languages section */
+
+.languages {
+    background: #fff;
+    box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.08);
+}
+
+.languages ul {
+    padding: 10px;
+}
+
+.languages ul li {
+    padding-bottom: 6px;
+}
+
+
+/* contact section */
+
+.contact {
+    background: #fff;
+    box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.08);
+}
+
+.contact .fa {
+    padding-right: 6px;
+}
+
+
+/* experience section */
+
+.experience {
+    background: #3366CC;
+    color: #f5f5f5;
+}
+
+.experience .experience-content {
+    padding-bottom: 14px;
+}
+
+.experience h5 {
+    display: inline-block;
+}
+
+.experience span {
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+
+/* footer section */
+
+footer {
+    color: #f9f9f9;
+    text-align: center;
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+
+/* social icon section */
+
+.social-icons {
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    list-style: none;
+}
+
+.social-icons li a {
+    background: #3366CC;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: all 0.4s ease-in;
+    position: relative;
+    bottom: 10px;
+    top: 10px;
+}
+
+.social-icons li a:hover {
+    background: #202020;
+    color: #fff;
+}
+
+@media ( max-width: 980px) {
+    .skills {
+        margin-top: 30px;
+    }
+}
+
+@media ( max-width: 360px) {
+    header h1 {
+        font-size: 30px;
+    }
+    .about h2 {
+        font-size: 24px;
+    }
+    .education h4,
+    .experience h4 {
+        font-size: 20px;
+    }
+}
+
+a .menu a:hover {
+    color: rgb(14, 194, 218);
+}
+
+.all {
+    width: 100%;
+    height: 1600px;
+}
+
+.menu {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 0 auto;
+    z-index: 99999;
+    opacity: 1;
+    background-color: white;
+}
+
+.left1 {
+    height: 80px;
+    float: left;
+    margin-left: 50px;
+}
+
+.left1 ul li {
+    padding: 0px 20px;
+    float: left;
+    list-style: none;
+}
+
+.left1 ul li a {
+    text-decoration: none;
+    color: rgb(35, 37, 39);
+    font-size: 25px;
+    line-height: 80px;
+    width: 140px;
+    font-family: STXingkai;
+}
+
+.right1 {
+    height: 80px;
+    float: right;
+    margin: 80px;
+    display: flex;
+    margin-top: 25px;
+}
+
+.right1 ul li {
+    padding: 0px 15px;
+    float: right;
+    list-style: none;
+}
+
+.right1 a {
+    text-decoration: none;
+    color: rgb(35, 37, 39);
+    font-size: 20px;
+    width: 80px;
+}
+
+.right1 input {
+    float: left;
+    flex: 4;
+    height: 30px;
+    outline: none;
+    border: 1px solid rgb(40, 40, 40);
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.right1 button {
+    float: right;
+    flex: 1;
+    height: 30px;
+    width: 35px;
+    background-color: #282828;
+    color: white;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.right1 button i {
+    font-style: normal;
+}
+
+.right1 button:hover {
+    background-color: rgb(152, 231, 255);
+}

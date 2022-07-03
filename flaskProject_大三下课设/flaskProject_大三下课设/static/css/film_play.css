@@ -1,0 +1,13 @@
+.play_window{
+    width:900px;
+    height: 900px;
+    background-color: red;
+    font: 24px 'Microsoft YaHei', Arial, Lucida Grande, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    cursor: default;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
